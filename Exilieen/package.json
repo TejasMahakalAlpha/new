@@ -2,8 +2,12 @@
   "name": "agri-app",
   "version": "1.0.0",
   "scripts": {
-  "build": "npm run build:frontend && npm run build:backend",
-  "build:frontend": "cd frontend && npm run build",
-  "build:backend": "cd backend && npm run build"
-}
+    "build:frontend": "cd frontend && npm run build",
+    "start:backend": "cd backend && npm run start",
+    "start:frontend": "cd frontend && npm run dev",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.0"
+  }
 }
