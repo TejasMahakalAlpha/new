@@ -2,7 +2,8 @@
   "name": "agri-app",
   "version": "1.0.0",
   "scripts": {
-    "dev:frontend": "cd frontend && npm run dev",
-    "start:backend": "cd backend && npm start"
-  }
+  "build": "npm run build:frontend && npm run build:backend",
+  "build:frontend": "cd frontend && npm run build",
+  "build:backend": "cd backend && npm run build"
+}
 }
